@@ -6,5 +6,6 @@ spring:
         server:
           git:
             uri: http://10.207.11.201:8000/git/config_service
+            searchPaths: config-repo
 server:
   port: 8888
