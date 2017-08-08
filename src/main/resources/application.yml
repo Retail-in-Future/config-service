@@ -4,7 +4,6 @@ spring:
     cloud:
       config:
         server:
-          prefix: /config-repo
           git:
             uri: http://10.207.11.201:8000/git/config_service
 server:

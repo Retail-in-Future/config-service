@@ -1,0 +1,31 @@
+spring:
+    application:
+            name: retail_sku
+    datasource:
+        url: jdbc:mysql://10.207.11.202:3306/retail_sku
+        username: root
+        password: retail__123
+
+    rabbitmq:
+            port: 5672
+            host: '10.207.11.202'
+            username: guest
+            password: guest
+            listener:
+              max-concurrency: 1
+              prefetch: 1
+              acknowledge-mode: auto
+              auto-startup: true
+            dynamic: true
+server:
+  port: 10001
+
+flyway:
+  locations: classpath:db/migration
+---
+spring:
+  profiles: sit
+  datasource:
+      url: jdbc:mysql://54.255.182.198:3306/retail_sku
+      username: retail
+      password: retail__123
