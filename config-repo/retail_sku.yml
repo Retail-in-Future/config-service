@@ -6,10 +6,6 @@ spring:
         username: root
         password: retail__123
 
-    eureka:
-      instance:
-        instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
-
     rabbitmq:
             port: 5672
             host: '10.207.11.202'
@@ -26,6 +22,11 @@ server:
 
 flyway:
   locations: classpath:db/migration
+
+
+eureka:
+      instance:
+        instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
 
 ---
 spring:
