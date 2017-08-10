@@ -7,8 +7,9 @@ server:
 
 zuul:
   routes:
-    stock:
+    retail-stock:
       path: /api/stocks/**
+      serviceId: retail-stock
 
 
 eureka:
