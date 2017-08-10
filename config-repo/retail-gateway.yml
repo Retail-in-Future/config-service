@@ -19,7 +19,7 @@ server:
 zuul:
   routes:
     retail-stock:
-      path: /api/stockAmount/**
+      path: /api/amount/**
       serviceId: retail-stock
 
 
