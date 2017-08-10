@@ -1,24 +1,25 @@
 spring:
-    application:
-            name: ratail-config
-    cloud:
-      config:
-        server:
-          git:
-            uri: http://10.207.11.201:8000/git/config_service
-            searchPaths: config-repo
+  application:
+   name: ratail-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://10.207.11.201:8000/git/config_service
+          searchPaths: config-repo
+      bus: enabled
 
 
-    rabbitmq:
-            port: 5672
-            host: '10.207.11.202'
-            username: guest
-            password: guest
-            listener:
-              max-concurrency: 1
-              prefetch: 1
-              acknowledge-mode: auto
-              auto-startup: true
-            dynamic: true
+  rabbitmq:
+    port: 5672
+    host: '10.207.11.202'
+    username: guest
+    password: guest
+    listener:
+      max-concurrency: 1
+      prefetch: 1
+      acknowledge-mode: auto
+      auto-startup: true
+    dynamic: true
 server:
   port: 8888
