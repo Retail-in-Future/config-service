@@ -1,6 +1,6 @@
 spring:
     application:
-            name: retail_stock
+            name: retail-stock
     datasource:
         url: jdbc:mysql://10.207.11.202:3306/retail_stock
         username: root
