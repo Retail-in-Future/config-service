@@ -1,6 +1,7 @@
 spring:
     application:
       name: retail-gateway
+
     rabbitmq:
       port: 5672
       host: '10.207.11.202'
@@ -11,16 +12,22 @@ spring:
         auto-startup: true
       dynamic: true
 
+    cloud:
+      config:
+        discovery:
+          enabled: true
+          serviceId: ratail-config
+
 server:
   port: 11000
 
 zuul:
   routes:
     retail-stock:
-      path: /api/amount1/**
+      path: /api/amount3/**
       serviceId: retail-stock
     retail-stock2:
-      path: /api/amout2/**
+      path: /api/amout4/**
       serviceId: retail-stock
 
 eureka:
