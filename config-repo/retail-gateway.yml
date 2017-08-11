@@ -24,7 +24,7 @@ server:
 zuul:
   routes:
     retail-stock:
-      path: /api/amount666/**
+      path: /api/amount7777/**
       serviceId: retail-stock
 
 eureka:
