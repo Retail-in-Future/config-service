@@ -7,8 +7,6 @@ spring:
       username: guest
       password: guest
       listener:
-        max-concurrency: 1
-        prefetch: 1
         acknowledge-mode: auto
         auto-startup: true
       dynamic: true
