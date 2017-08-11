@@ -1,4 +1,4 @@
-package com.thoughtworks.retail;
+package com.thoughtworks.retail.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
