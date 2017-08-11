@@ -1,0 +1,25 @@
+spring:
+  rabbitmq:
+    port: 5672
+    host: '10.207.11.202'
+    username: guest
+    password: guest
+    listener:
+      acknowledge-mode: auto
+      auto-startup: true
+    dynamic: true
+
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: ratail-config
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}

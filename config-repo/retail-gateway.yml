@@ -2,22 +2,6 @@ spring:
     application:
       name: retail-gateway
 
-    rabbitmq:
-      port: 5672
-      host: '10.207.11.202'
-      username: guest
-      password: guest
-      listener:
-        acknowledge-mode: auto
-        auto-startup: true
-      dynamic: true
-
-    cloud:
-      config:
-        discovery:
-          enabled: true
-          serviceId: ratail-config
-
 server:
   port: 11000
 
@@ -27,6 +11,4 @@ zuul:
       path: /api/amount7777/**
       serviceId: retail-stock
 
-eureka:
-      instance:
-        instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+
