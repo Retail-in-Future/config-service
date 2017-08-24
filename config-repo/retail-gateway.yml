@@ -11,4 +11,3 @@ zuul:
       path: /api/stock412323232323/**
       serviceId: retail-stock
 
-
