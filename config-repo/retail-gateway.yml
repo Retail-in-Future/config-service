@@ -8,6 +8,6 @@ server:
 zuul:
   routes:
     retail-stock:
-      path: /api/stock412323232323/**
+      path: /api/stock/**
       serviceId: retail-stock
 
