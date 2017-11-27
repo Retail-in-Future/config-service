@@ -1,7 +1,7 @@
 spring:
   rabbitmq:
     port: 5672
-    host: '10.207.11.202'
+    host: 'localhost'
     username: guest
     password: guest
     listener:
